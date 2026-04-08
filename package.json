@@ -2,7 +2,7 @@
   "publisher": "sankeyangshu",
   "name": "galaxy-monokai-theme",
   "displayName": "Galaxy Monokai Theme",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "packageManager": "pnpm@10.32.1",
   "description": "Galaxy Monokai Theme for VS Code",
   "author": {
