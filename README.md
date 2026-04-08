@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://raw.githubusercontent.com/sankeyangshu/vscode-theme-galaxy/master/icon.png" width="80" alt="Galaxy Theme Logo"/>
+  <img src="https://raw.githubusercontent.com/sankeyangshu/vscode-theme-galaxy/master/res/icon.png" width="80" alt="Galaxy Theme Logo"/>
   <br>
   Galaxy Theme for VS Code
 </h1>
