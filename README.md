@@ -1,26 +1,26 @@
 <h1 align="center">
-  <img src="https://raw.githubusercontent.com/sankeyangshu/vscode-theme-galaxy/master/icon.png" width="80"/>
+  <img src="https://raw.githubusercontent.com/sankeyangshu/vscode-theme-galaxy/master/icon.png" width="80" alt="Galaxy Theme Logo"/>
   <br>
   Galaxy Theme for VS Code
 </h1>
 
 ## Theme Screenshot
 
-#### Html5
+### Html5
 
-<img src="/images/html.png" width='100%' />
+<img src="/images/html.png" width='100%' alt="Html5 Screenshot" />
 
-#### Vue.js
+### Vue.js
 
-<img src="/images/vue.png" width='100%' />
+<img src="/images/vue.png" width='100%' alt="Vue.js Screenshot" />
 
-#### Javascript
+### Javascript
 
-<img src="/images/javascript.png" width='100%' />
+<img src="/images/javascript.png" width='100%' alt="Javascript Screenshot" />
 
-#### Typescript
+### Typescript
 
-<img src="/images/typescript.png" width='100%' />
+<img src="/images/typescript.png" width='100%' alt="Typescript Screenshot" />
 
 <div align="center">
 
@@ -31,7 +31,7 @@
 
 ## Thanks
 
-This project is based on [One Monokai Theme](https://github.com/azemoh/vscode-one-monokai).
+This project is based on [Evondev Dracula](https://github.com/evondev/evondev-dracula) and [Houston](https://github.com/withastro/houston-vscode).
 
 ## License
 
