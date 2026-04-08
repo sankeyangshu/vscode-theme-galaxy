@@ -1,35 +1,85 @@
 {
+  "publisher": "sankeyangshu",
   "name": "galaxy-monokai-theme",
   "displayName": "Galaxy Monokai Theme",
-  "description": "Galaxy Monokai Theme for VS Code",
   "version": "0.1.1",
-  "publisher": "sankeyangshu",
-  "engines": {
-    "vscode": "^1.43.0"
+  "packageManager": "pnpm@10.32.1",
+  "description": "Galaxy Monokai Theme for VS Code",
+  "author": {
+    "name": "sankeyangshu",
+    "email": "sankeyangshu@gmail.com",
+    "url": "https://github.com/sankeyangshu"
   },
-  "files": [
-    "themes"
-  ],
-  "keywords": [
-    "theme",
-    "dark"
-  ],
+  "license": "MIT",
+  "homepage": "https://github.com/sankeyangshu/vscode-theme-galaxy#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/sankeyangshu/vscode-theme-galaxy"
   },
-  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sankeyangshu/vscode-theme-galaxy/issues"
+  },
+  "keywords": [
+    "theme",
+    "dark"
+  ],
   "categories": [
     "Themes"
   ],
-  "icon": "icon.png",
+  "icon": "res/icon.png",
+  "files": [
+    "res/*",
+    "themes/*"
+  ],
+  "engines": {
+    "vscode": "^1.43.0"
+  },
   "contributes": {
     "themes": [
       {
         "label": "Galaxy Theme",
         "uiTheme": "vs-dark",
-        "path": "./themes/Galaxy Theme-color-theme.json"
+        "path": "./themes/galaxy-dark-color-theme.json"
       }
     ]
+  },
+  "scripts": {
+    "build": "tsdown src/index.ts --external vscode",
+    "dev": "pnpm run build --watch",
+    "update": "vscode-ext-gen --output src/generated/meta.ts",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "vscode:prepublish": "pnpm run build",
+    "ext:package": "vsce package --no-dependencies",
+    "ext:publish": "vsxpub --no-dependencies",
+    "typecheck": "tsc --noEmit",
+    "release": "bumpp",
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "simple-git-hooks"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^7.7.3",
+    "@commitlint/cli": "^20.5.0",
+    "@commitlint/config-conventional": "^20.5.0",
+    "@types/node": "^25.5.0",
+    "@types/vscode": "^1.43.0",
+    "@vscode/vsce": "^3.7.1",
+    "bumpp": "^11.0.1",
+    "eslint": "^10.0.3",
+    "lint-staged": "^16.4.0",
+    "rimraf": "^6.1.3",
+    "simple-git-hooks": "^2.13.1",
+    "tsdown": "^0.21.4",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vscode-ext-gen": "^1.6.0",
+    "vsxpub": "^0.1.4"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm typecheck && pnpm lint-staged",
+    "commit-msg": "pnpm exec commitlint --edit $1"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
   }
 }
